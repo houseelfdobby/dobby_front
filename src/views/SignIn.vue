@@ -50,7 +50,7 @@
 
 
 
-<script>
+<script >
 import axios from "axios";
 export default {
   data() {
@@ -71,6 +71,8 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+@import "@/assets/css/index.scss";
+
 .vertContainer {
   display: flex;
 }
@@ -81,13 +83,13 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    background-color: rgb(32, 56, 100);
+    background-color: $mainColor;
     color: white;
     &-Form {
       display: grid;
-      &Label{
-        display:inline-block;
-        vertical-align:middle;
+      &Label {
+        display: inline-block;
+        vertical-align: middle;
         vertical-align: -webkit-baseline-middle;
         // padding-top:15px;
       }
@@ -114,12 +116,12 @@ export default {
   }
   .el-main {
     .el-button {
-      background-color: rgb(50, 93, 173);
+      background-color: $primaryButtonColor;
       color: white;
       width: 100%;
-      font-size:20px;
+      font-size: 20px;
       font-weight: 600;
-      height:50px;
+      height: 50px;
     }
   }
   .el-form-item {
