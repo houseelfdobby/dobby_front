@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import SignUpTenant from './views/SignUpTenant'
+import SignUpHouseOwner from './views/SignUpHouseOwner'
 
 Vue.use(Router)
 
@@ -12,6 +14,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/signup_tenant',
+      name: 'signup_tenant',
+      component: SignUpTenant
+    },
+    {
+      path: '/signup_houseowner',
+      name: 'signup_houseowner',
+      component: SignUpHouseOwner
     }
   ]
 })
