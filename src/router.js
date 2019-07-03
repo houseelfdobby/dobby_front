@@ -5,18 +5,21 @@ import SignIn from './views/SignIn'
 import SignUpTenant from './views/SignUpTenant'
 import SignUpHouseOwner from './views/SignUpHouseOwner'
 
+import Enroll from './views/Enroll'
+
+
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: SignIn
     },
     {
+
       path: '/signup_tenant',
       name: 'signup_tenant',
       component: SignUpTenant
@@ -25,6 +28,13 @@ export default new Router({
       path: '/signup_houseowner',
       name: 'signup_houseowner',
       component: SignUpHouseOwner
+
+    },
+     {
+      path: '/enroll',
+      name: 'enroll',
+      component: Enroll
+
     }
   ]
 })
