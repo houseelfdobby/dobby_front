@@ -34,14 +34,24 @@
           <el-row>
             <el-row>이름</el-row>
             <el-col span="23" offset="0">
-              <el-input placeholder="ex) 이지은" v-model="name" clearable></el-input>
+              <el-input
+                placeholder="ex) 이지은"
+                v-model="name"
+                clearable
+                style="border: 1px solid #203864;"
+              ></el-input>
             </el-col>
           </el-row>
           <br />
           <el-row>
             <el-row>전화번호 ('-' 제외)</el-row>
             <el-col span="23" offset="0">
-              <el-input placeholder="ex) 010-1234-5678" v-model="phone" clearable></el-input>
+              <el-input
+                placeholder="ex) 010-1234-5678"
+                v-model="phone"
+                clearable
+                style="border: 1px solid #203864;"
+              ></el-input>
             </el-col>
           </el-row>
           <br />
@@ -63,22 +73,42 @@
               <el-col :span="8">
                 <template v-if="contract === '전세'">
                   <el-col offset="7">계약 기간</el-col>
-                  <el-input placeholder="ex) 20191001" v-model="payment_day" clearable></el-input>
+                  <el-input
+                    placeholder="ex) 20191001"
+                    v-model="payment_day"
+                    clearable
+                    style="border: 1px solid #203864;"
+                  ></el-input>
                 </template>
                 <template v-else-if="contract === '월세'">
                   <el-col offset="7">월 납부일</el-col>
-                  <el-input placeholder="ex) 15" v-model="payment_day" clearable></el-input>
+                  <el-input
+                    placeholder="ex) 15"
+                    v-model="payment_day"
+                    clearable
+                    style="border: 1px solid #203864;"
+                  ></el-input>
                 </template>
               </el-col>
               <el-col :span="7">
                 <div id="mini">
                   <template v-if="contract === '전세'">
                     <el-col offset="2">보증금 (단위:만원)</el-col>
-                    <el-input placeholder="ex) 500" v-model="deposit" clearable></el-input>
+                    <el-input
+                      placeholder="ex) 500"
+                      v-model="deposit"
+                      clearable
+                      style="border: 1px solid #203864;"
+                    ></el-input>
                   </template>
                   <template v-else-if="contract === '월세'">
                     <el-col offset="2">납부금 (단위:만원)</el-col>
-                    <el-input placeholder="ex) 20" v-model="deposit" clearable></el-input>
+                    <el-input
+                      placeholder="ex) 20"
+                      v-model="deposit"
+                      clearable
+                      style="border: 1px solid #203864;"
+                    ></el-input>
                   </template>
                 </div>
               </el-col>
@@ -115,7 +145,12 @@
                 </select>
               </el-col>
               <el-col :span="23" offset="0">
-                <el-input placeholder="ex) 3520538788183" v-model="bank_account" clearable></el-input>
+                <el-input
+                  placeholder="ex) 3520538788183"
+                  v-model="bank_account"
+                  clearable
+                  style="border: 1px solid #203864;"
+                ></el-input>
               </el-col>
             </el-row>
             <br />
