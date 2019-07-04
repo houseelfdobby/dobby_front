@@ -64,7 +64,10 @@
             <el-row type="flex" justify="space-around">
               <el-col :span="5" offset="1">
                 <div class="Enroll-Main-Input-Selete">
-                  <select v-model="contract" style="border: 1px solid #203864;">
+                  <select
+                    v-model="contract"
+                    style="border: 1px solid #203864; width:1px; height:1px; "
+                  >
                     <option disabled value>---선택---</option>
                     <option>전세</option>
                     <option>월세</option>
