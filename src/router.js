@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import SignUpTenant from './views/SignUpTenant'
 import SignUpHouseOwner from './views/SignUpHouseOwner'
+import Certificate from './views/Certificate'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/signup_houseowner',
       name: 'signup_houseowner',
       component: SignUpHouseOwner
+    },
+    {
+      path: '/certificate',
+      name: 'certificate',
+      component: Certificate
     }
   ]
 })

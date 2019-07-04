@@ -3,7 +3,7 @@
     <div class="SignUp-Cotent">
       <div class="SignUp-Banner">
         <div class="SignUp-BannerImg">
-          <img src="@/assets/도비.png" width="50" height="50" alt />
+          <img class="logo" src="@/assets/도비.png"  alt />
         </div>
         <div class="SignUp-BannerText">- TENANT -</div>
         <br>
@@ -24,7 +24,7 @@
           <input type="text" />
         </div>
         <br>
-        <button type="submit" class="SignUp-FormButton">가입하기</button>
+        <input type="button" class="SignUp-FormEnroll" value="가입하기"/>
     </div>
   </div>
 </div>
@@ -36,12 +36,20 @@ export default {};
 
 <style lang="scss" scoped>
 .SignUp {
+  font-family: a스마일B;
   background-color: rgb(217,217,217);
+  &-BannerImg {
+    .logo{
+      width: 50px;
+      height: 50px;
+    }
+  }
   &-Form{ 
     width: 100%;
     max-width: 300px;
-    margin-left: 330px;
-    &Button{
+    margin-left: 550px;
+    &Enroll{
+      font-family: a스마일B;
       background-color: rgb(32,56,100);
       color: white;
       width: 166px;

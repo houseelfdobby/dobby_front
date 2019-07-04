@@ -3,7 +3,7 @@
     <div class="SignUp-Cotent">
       <div class="SignUp-Banner">
         <div class="SignUp-BannerImg">
-          <img src="@/assets/도비.png" width="50" height="50" alt />
+          <img class="logo" src="@/assets/도비.png"  alt />
         </div>
         <div class="SignUp-BannerText">- HOUSE OWNER -</div>
         <br>
@@ -22,8 +22,8 @@
           </div>
           <div class="Address">
           <div class="SignUp-FormLabel">건물주소</div>
-          <input type="text" class="SignUp-FormTextbox" style="width:140px;" placeholder="우편 번호"/> &nbsp; 
-          <button type="submit" class="SignUp-FormButton" style="width:75px;">검색</button>
+          <input type="text" class="SignUp-FormZipCode" placeholder="우편 번호"/> &nbsp; 
+          <input type="button" class="SignUp-FormSearch" value="검색"/>
           <input type="text" class="SignUp-FormTextbox" placeholder="상세 주소"/>
           </div>
           <div class="Account">
@@ -34,15 +34,16 @@
             <option value="전북은행">전북은행</option>
             <option value="농협">농협</option>
           </select> &nbsp;
-          <input type="text" class="SignUp-FormTextbox" style="width:135px;" placeholder="계좌 번호" />
+          <input type="text" class="SignUp-FormAccountNumber" placeholder="계좌 번호" />
           </div>
           <div class="Building">        
             <div class="SignUp-FormLabel">건물상세정보</div>
-            <input type="text" class="SignUp-FormTextbox" style="width:105px;" placeholder="층"> &nbsp;
-            <input type="text" class="SignUp-FormTextbox" style="width:105px;" placeholder="호"/>
+            <input type="text" class="SignUp-FormBuildingFloor" placeholder="층"> &nbsp;
+            <input type="text" class="SignUp-FormBuildingRoom"  placeholder="호"/>
           </div>
           <br>
-          <button type="submit" class="SignUp-FormButton">가입하기</button>
+            <input type="button" class="SignUp-FormEnroll" value="가입하기"/> 
+            <!-- 건물주 Main으로  -->
         </div>
       </div>
     </div>
@@ -55,20 +56,44 @@ export default {};
 
 <style lang="scss" scoped>
 .SignUp {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: a스마일B;
   background-color: rgb(217, 217, 217);
   &-Content {
   }
   &-BannerImg {
+    .logo{
+      width: 50px;
+      height: 50px;
+
+    }
   }
   &-Form {
     width: 100%;
     max-width: 300px;
-    margin-left: 290px;
+    margin-left: 520px;
+    &ZipCode{
+      width: 140px;
+    }
+    &AccountNumber{
+      width: 135px;
+    }
+    &BuildingFloor{
+      width:105px;
+    }
+    &BuildingRoom{
+      width:105px;
+    }
     &Textbox{
       width:230px;
       }
-    &Button{
+    &Search{
+      font-family: a스마일B;
+      background-color: rgb(32,56,100);
+      color: white;
+      width:75px;
+    }
+    &Enroll{
+      font-family: a스마일B;
       background-color: rgb(32,56,100);
       color: white;
       width: 234px;
