@@ -1,5 +1,5 @@
 <template>
-  <div class="Enroll">
+  <div class="Enroll" style="backgroundColor:#D9D9D9; width:100%; height:100%;">
     <!--
     <el-header style="backgroundColor:#203864;">
       <el-row>
@@ -18,7 +18,7 @@
       </el-row>
     </el-header>
     -->
-    <div id="background" style>
+    <div id="background">
       <div class="Enroll-Main" style="backgroundColor:#D9D9D9;">
         <div class="Enroll-Main-Title" style="width:380px; margin:auto;">
           <el-row>
@@ -84,7 +84,7 @@
               </el-col>
             </el-row>
             <br />
-            <div id="dues">
+            <div class="Enroll-Main-Input-Dues">
               <el-row type="flex" justify="space-around">
                 <el-col span="6" offset="1">
                   <input type="checkbox" id="gas" value="gas" v-model="dues" />
@@ -131,6 +131,10 @@
         </div>
       </div>
     </div>
+    <div class="Enroll-Checks">
+      <input type="checkbox" id="ex_chk3" />
+      <label for="ex_chk3">체크박스</label>
+    </div>
   </div>
 </template>
 
@@ -155,7 +159,15 @@ export default {
 
 <style lang='scss' scoped>
 .template {
-  background-color: #d9d9d9;
+  height: 100%;
+}
+
+.Enroll {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 .Enroll-Main-Input {
   text-align: left;
@@ -163,9 +175,7 @@ export default {
   &-Button {
     color: white;
   }
-}
-
-#enroll-Button {
-  color: white;
+  &-Dues {
+  }
 }
 </style>
