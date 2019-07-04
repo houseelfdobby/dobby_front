@@ -74,7 +74,7 @@ export default {};
   &-Form {
     width: 100%;
     max-width: 300px;
-    margin-left: 520px;
+    margin: auto;
     &Item{
       .Name{
         padding: 0px 0px 8px 0px;
@@ -89,33 +89,44 @@ export default {};
         padding: 0px 0px 8px 0px;
       }
       .DetailAddress{
-        padding: 0px 0px 5px 0px;
+        padding: 0px 0px 8px 0px;
       }
       .Account{
         padding: 0px 0px 8px 0px;
       }
     }
+    &Textbox{
+      width:230px;
+      height: 22px;
+      border: 1px solid #999999;
+          }
     &ZipCode{
       width: 140px;
-    
+      height: 22px;
+      border: 1px solid #999999;
     }
     &AccountNumber{
-      width: 135px;
+      width: 132px;
+      height: 22px;
+      border: 1px solid #999999;
     }
     &BuildingFloor{
       width:105px;
+      height: 22px;
+      border: 1px solid #999999;
     }
     &BuildingRoom{
       width:105px;
+      height: 22px;
+      border: 1px solid #999999;
     }
-    &Textbox{
-      width:230px;
-      }
+   
     &Search{
       font-family: a스마일B;
       background-color: rgb(32,56,100);
       color: white;
       width:75px;
+      height: 22px;
       border: 1px solid rgb(32,56,100);
       border-radius: 10px;
     }
@@ -124,6 +135,7 @@ export default {};
       background-color: rgb(32,56,100);
       color: white;
       width: 234px;
+      height: 22px;
       border: 1px solid rgb(32,56,100);
       border-radius: 10px;
 
