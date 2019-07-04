@@ -17,6 +17,8 @@
           <div class="PassWord">
           <div class="SignUp-FormLabel">비밀번호</div>
           <input type="text" class="SignUp-FormTextbox"/>
+          </div>
+          <div class="PassWordConfirm">
           <div class="SignUp-FormLabel">비밀번호 확인</div>
           <input type="text" class="SignUp-FormTextbox"/>
           </div>
@@ -24,6 +26,8 @@
           <div class="SignUp-FormLabel">건물주소</div>
           <input type="text" class="SignUp-FormZipCode" placeholder="우편 번호"/> &nbsp; 
           <input type="button" class="SignUp-FormSearch" value="검색"/>
+          </div>
+          <div class="DetailAddress">
           <input type="text" class="SignUp-FormTextbox" placeholder="상세 주소"/>
           </div>
           <div class="Account">
@@ -71,8 +75,29 @@ export default {};
     width: 100%;
     max-width: 300px;
     margin-left: 520px;
+    &Item{
+      .Name{
+        padding: 0px 0px 8px 0px;
+      }
+      .PassWord{
+        padding: 0px 0px 8px 0px;
+      }
+      .PassWordConfirm{
+        padding: 0px 0px 8px 0px;
+      }
+      .Address{
+        padding: 0px 0px 8px 0px;
+      }
+      .DetailAddress{
+        padding: 0px 0px 5px 0px;
+      }
+      .Account{
+        padding: 0px 0px 8px 0px;
+      }
+    }
     &ZipCode{
       width: 140px;
+    
     }
     &AccountNumber{
       width: 135px;
@@ -91,12 +116,17 @@ export default {};
       background-color: rgb(32,56,100);
       color: white;
       width:75px;
+      border: 1px solid rgb(32,56,100);
+      border-radius: 10px;
     }
     &Enroll{
       font-family: a스마일B;
       background-color: rgb(32,56,100);
       color: white;
       width: 234px;
+      border: 1px solid rgb(32,56,100);
+      border-radius: 10px;
+
     }
    
   }

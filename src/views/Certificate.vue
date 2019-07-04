@@ -39,6 +39,8 @@ export default {};
       background-color: rgb(32,56,100);
       color: white;
       width: 234px;
+      border: 1px solid rgb(32,56,100);
+      border-radius: 10px;
     }
     }
 
