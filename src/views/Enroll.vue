@@ -23,10 +23,10 @@
         <div class="Enroll-Main-Title" style="width:380px; margin:auto;">
           <el-row>
             <el-row>
-              <img src="./dobby.png" width="50" height="50" />
+              <img src="..\assets\image\도비.png" width="50" height="50" />
             </el-row>
             <br />
-            <el-row>N호 입주</el-row>
+            <el-row>-N호 입주-</el-row>
           </el-row>
         </div>
         <div class="Enroll-Main-Input" style="width:380px; margin:auto;">
@@ -63,11 +63,13 @@
             </el-row>
             <el-row type="flex" justify="space-around">
               <el-col :span="5" offset="1">
-                <select v-model="contract">
-                  <option disabled value>---선택---</option>
-                  <option>전세</option>
-                  <option>월세</option>
-                </select>
+                <div class="Enroll-Main-Input-Selete">
+                  <select v-model="contract" style="border: 1px solid #203864;">
+                    <option disabled value>---선택---</option>
+                    <option>전세</option>
+                    <option>월세</option>
+                  </select>
+                </div>
                 <!--<span>선택: {{ contract }}</span>-->
               </el-col>
               <el-col :span="8">
@@ -93,7 +95,7 @@
               <el-col :span="7">
                 <div id="mini">
                   <template v-if="contract === '전세'">
-                    <el-col offset="2">보증금 (단위:만원)</el-col>
+                    <el-col offset="1">보증금 (단위:만원)</el-col>
                     <el-input
                       placeholder="ex) 500"
                       v-model="deposit"
@@ -102,7 +104,7 @@
                     ></el-input>
                   </template>
                   <template v-else-if="contract === '월세'">
-                    <el-col offset="2">납부금 (단위:만원)</el-col>
+                    <el-col offset="1">납부금 (단위:만원)</el-col>
                     <el-input
                       placeholder="ex) 20"
                       v-model="deposit"
@@ -134,7 +136,7 @@
             <el-row>계좌번호</el-row>
             <el-row type="flex" justify="space-around">
               <el-col :span="14" offset="0">
-                <select v-model="bank_name">
+                <select v-model="bank_name" style="border: 1px solid #203864;">
                   <option disabled value>--------은행명--------</option>
                   <option>농협</option>
                   <option>국민은행</option>
@@ -201,10 +203,13 @@ export default {
   height: 100%;
 }
 .Enroll-Main-Input {
+  font-family: "나눔고딕";
   text-align: left;
-  font-size: 9pt;
+  font-size: 10pt;
   &-Button {
     color: white;
+  }
+  &-Selete {
   }
   &-Dues {
   }
