@@ -85,9 +85,9 @@ export default {
     color: white;
     &-Form {
       display: grid;
-      &Label{
-        display:inline-block;
-        vertical-align:middle;
+      &Label {
+        display: inline-block;
+        vertical-align: middle;
         vertical-align: -webkit-baseline-middle;
         // padding-top:15px;
       }
@@ -117,9 +117,9 @@ export default {
       background-color: rgb(50, 93, 173);
       color: white;
       width: 100%;
-      font-size:20px;
+      font-size: 20px;
       font-weight: 600;
-      height:50px;
+      height: 50px;
     }
   }
   .el-form-item {
