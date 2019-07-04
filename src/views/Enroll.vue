@@ -166,10 +166,6 @@
         </div>
       </div>
     </div>
-    <div class="Enroll-Checks">
-      <input type="checkbox" id="ex_chk3" />
-      <label for="ex_chk3">체크박스</label>
-    </div>
   </div>
 </template>
 
