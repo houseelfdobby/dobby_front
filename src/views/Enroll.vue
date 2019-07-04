@@ -28,14 +28,14 @@
         <br />
         <el-row>
           <el-row>이름</el-row>
-          <el-col span="22" offset="1">
+          <el-col span="23" offset="1">
             <el-input placeholder="ex) 이지은" v-model="name" clearable></el-input>
           </el-col>
         </el-row>
         <br />
         <el-row>
           <el-row>전화번호 ('-' 제외)</el-row>
-          <el-col span="22" offset="1">
+          <el-col span="23" offset="1">
             <el-input placeholder="ex) 010-1234-5678" v-model="phone" clearable></el-input>
           </el-col>
         </el-row>
@@ -143,7 +143,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.banner {
-  color: red;
+.Enroll_Root {
 }
 </style>
