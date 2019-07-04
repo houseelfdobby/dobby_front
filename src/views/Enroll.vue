@@ -32,7 +32,7 @@
         <div class="Enroll-Main-Input" style="width:380px; margin:auto;">
           <br />
           <el-row>
-            <el-row>이름</el-row>
+            <el-row class="Enroll-Label">이름</el-row>
             <el-col span="23" offset="0">
               <el-input
                 placeholder="ex) 이지은"
@@ -57,14 +57,15 @@
           <br />
           <el-row>
             <el-row type="flex" justify="space-around">
-              <el-col offset="2">전세/월세</el-col>
+              <el-col offset="1">계약 유형</el-col>
               <el-col offset="2">Option 1</el-col>
               <el-col offset="2">Option 2</el-col>
             </el-row>
             <el-row type="flex" justify="space-around">
-              <el-col :span="5" offset="1">
+              <el-col :span="5" offset="0">
                 <div class="Enroll-Main-Input-Selete">
-                  <select v-model="contract" style="border: 1px solid #203864;">
+                  <el-col offset="1">전세/월세</el-col>
+                  <select v-model="contract" style="border: 1px solid #203864; height:42px;">
                     <option disabled value>---선택---</option>
                     <option>전세</option>
                     <option>월세</option>
@@ -76,7 +77,7 @@
                 <template v-if="contract === '전세'">
                   <el-col offset="7">계약 기간</el-col>
                   <el-input
-                    placeholder="ex) 20191001"
+                    placeholder="ex) 20191202"
                     v-model="payment_day"
                     clearable
                     style="border: 1px solid #203864;"
@@ -136,7 +137,7 @@
             <el-row>계좌번호</el-row>
             <el-row type="flex" justify="space-around">
               <el-col :span="14" offset="0">
-                <select v-model="bank_name" style="border: 1px solid #203864;">
+                <select v-model="bank_name" style="border: 1px solid #203864; height:42px;">
                   <option disabled value>--------은행명--------</option>
                   <option>농협</option>
                   <option>국민은행</option>
@@ -196,20 +197,22 @@ export default {
 }
 
 .Enroll {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  width: 100%;
-  height: 100%;
+  font-family: a스마일B;
+  background-color: rgb(32, 56, 100);
+  color: rgb(32, 56, 100);
+  border: 1px solid rgb(32, 56, 100);
+  border-radius: 10px;
+}
+.Enroll-Label {
 }
 .Enroll-Main-Input {
-  font-family: "나눔고딕";
   text-align: left;
   font-size: 10pt;
   &-Button {
     color: white;
   }
   &-Selete {
+    height: 60px;
   }
   &-Dues {
   }
