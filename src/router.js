@@ -5,6 +5,7 @@ import SignIn from './views/SignIn'
 import SignUpTenant from './views/SignUpTenant'
 import SignUpHouseOwner from './views/SignUpHouseOwner'
 import Certificate from './views/Certificate'
+import Communication from './views/Communication'
 
 import Enroll from './views/Enroll'
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/certificate',
       mame: 'certificate',
       component: Certificate
+    },
+    {
+      path: '/communication',
+      name: 'communication',
+      component: Communication
     }
   ]
 })
