@@ -3,7 +3,7 @@
         <div class="Certificate-Content">
             <div class="Certificate-Banner">
                 <div class="Certificate-BannerImg">
-                    <img class="logo" src="@/assets/도비.png" alt />
+                    <img class="logo" src="@/assets/image/도비.png" alt />
                 </div>
                 <div class="Certificate-BannerText">- 101호 -</div>
             </div>
