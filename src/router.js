@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import SignIn from './views/SignIn'
 import SignUpTenant from './views/SignUpTenant'
 import SignUpHouseOwner from './views/SignUpHouseOwner'
+import Certificate from './views/Certificate'
 
 import Enroll from './views/Enroll'
 
@@ -35,6 +36,11 @@ export default new Router({
       name: 'enroll',
       component: Enroll
 
+    },
+    {
+      path: '/certificate',
+      name: 'certificate',
+      component: Certificate
     }
   ]
 })
