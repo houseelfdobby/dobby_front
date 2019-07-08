@@ -26,6 +26,7 @@ export default {};
 .Certificate{
     font-family: a스마일B;
     background-color: rgb(217, 217, 217);
+    height: 100%;
      &-BannerImg {
         .logo{
         width: 50px;
