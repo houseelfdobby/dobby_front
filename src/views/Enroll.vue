@@ -1,8 +1,8 @@
 <template>
-  <div class="Enroll" style="backgroundColor:#D9D9D9; width:100%; height:100%;">
-    <div id="background">
+  <div class="Enroll">
+    <div class="Enroll__background">
       <div class="Enroll-Main" style="backgroundColor:#D9D9D9;">
-        <div class="Enroll-Main-Title" style="width:380px; margin:auto;">
+        <div class="Enroll-Main-Title">
           <el-row>
             <el-row>
               <img src="@/assets/image/도비.png" width="50" height="50" />
@@ -11,7 +11,7 @@
             <el-row>-N호 입주-</el-row>
           </el-row>
         </div>
-        <div class="Enroll-Main-Input" style="width:380px; margin:auto;">
+        <div class="Enroll-Main-Input">
           <br />
           <el-row>
             <el-row class="Enroll-Label">이름</el-row>
@@ -20,7 +20,7 @@
                 placeholder="ex) 이지은"
                 v-model="name"
                 clearable
-                style="border: 1px solid #203864;"
+                class="input-border"
               ></el-input>
             </el-col>
           </el-row>
@@ -32,7 +32,7 @@
                 placeholder="ex) 010-1234-5678"
                 v-model="phone"
                 clearable
-                style="border: 1px solid #203864;"
+                class="input-border"
               ></el-input>
             </el-col>
           </el-row>
@@ -47,7 +47,10 @@
               <el-col :span="5" :offset="0">
                 <div class="Enroll-Main-Input-Selete">
                   <el-col :offset="1">전세/월세</el-col>
-                  <select v-model="contract" style="border: 1px solid #203864; height:42px;">
+                  <select
+                    class="input-border"
+                    v-model="contract"
+                  >
                     <option disabled value>---선택---</option>
                     <option>전세</option>
                     <option>월세</option>
@@ -62,7 +65,7 @@
                     placeholder="ex) 20191202"
                     v-model="payment_day"
                     clearable
-                    style="border: 1px solid #203864;"
+                    class="input-border"
                   ></el-input>
                 </template>
                 <template v-else-if="contract === '월세'">
@@ -71,7 +74,7 @@
                     placeholder="ex) 15"
                     v-model="payment_day"
                     clearable
-                    style="border: 1px solid #203864;"
+                    class="input-border"
                   ></el-input>
                 </template>
               </el-col>
@@ -83,7 +86,7 @@
                       placeholder="ex) 500"
                       v-model="deposit"
                       clearable
-                      style="border: 1px solid #203864;"
+                      class="input-border"
                     ></el-input>
                   </template>
                   <template v-else-if="contract === '월세'">
@@ -92,7 +95,7 @@
                       placeholder="ex) 20"
                       v-model="deposit"
                       clearable
-                      style="border: 1px solid #203864;"
+                      class="input-border"
                     ></el-input>
                   </template>
                 </div>
@@ -134,7 +137,7 @@
                   placeholder="ex) 3520538788183"
                   v-model="bank_account"
                   clearable
-                  style="border: 1px solid #203864;"
+                  class="input-border"
                 ></el-input>
               </el-col>
             </el-row>
@@ -177,15 +180,28 @@ export default {
 .template {
   height: 100%;
 }
+.input-border {
+  border: 1px solid #203864;
+  height: 42px;
+}
 
 .Enroll {
   font-family: a스마일B;
-  background-color: rgb(32, 56, 100);
+  background-color: #d9d9d9;
   color: rgb(32, 56, 100);
-  border: 1px solid rgb(32, 56, 100);
   border-radius: 10px;
+  // width: 100%;
+  // width:380px;
+  // margin
+  height: 100%;
 }
-.Enroll-Label {
+.Enroll__background {
+  width: 380px;
+  margin: auto;
+}
+.Enroll-Main-Title {
+  // width: 380px;
+  // margin: auto;
 }
 .Enroll-Main-Input {
   text-align: left;
