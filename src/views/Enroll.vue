@@ -23,7 +23,7 @@
         <div class="Enroll-Main-Title" style="width:380px; margin:auto;">
           <el-row>
             <el-row>
-              <img src="..\assets\image\도비.png" width="50" height="50" />
+              <img src="@/assets/image/도비.png" width="50" height="50" />
             </el-row>
             <br />
             <el-row>-N호 입주-</el-row>
