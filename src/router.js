@@ -6,8 +6,8 @@ import SignUpTenant from './views/SignUpTenant'
 import SignUpHouseOwner from './views/SignUpHouseOwner'
 import Certificate from './views/Certificate'
 import Communication from './views/Communication'
-
 import Enroll from './views/Enroll'
+import TenantMain from './views/TenantMain'
 
 
 Vue.use(Router)
@@ -33,13 +33,17 @@ export default new Router({
       component: SignUpHouseOwner
 
     },
-     {
+    {
       path: '/enroll',
       name: 'enroll',
       component: Enroll
 
     },
     {
+      path: '/tenant_main',
+      name: 'tenant_main',
+      component: TenantMain
+    },
       path: '/certificate',
       mame: 'certificate',
       component: Certificate
