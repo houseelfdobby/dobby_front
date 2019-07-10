@@ -2,7 +2,7 @@
   <div class="SiginIn">
     <div class="SiginIn-Header">
       <div>
-        <img class="logo" src="../assets/image/도비.png" alt="도비">
+        <img class="logo" src="../assets/image/도비.png" alt="도비" />
       </div>
       <div class="SiginIn-Header-Form">
         <el-row>
@@ -120,6 +120,9 @@ export default {
     }
   }
   .el-main {
+    width:100%;
+    max-width:1600px;
+    margin:auto;
     .el-button {
       background-color: $primaryButtonColor;
       color: white;
