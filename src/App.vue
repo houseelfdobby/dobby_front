@@ -6,17 +6,16 @@
 
 <style lang="scss">
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  height: 100%;
-}
 html,
 body {
   height: 100%;
   margin:0;
+  background-color: #e9ebee;
+}
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 </style>
