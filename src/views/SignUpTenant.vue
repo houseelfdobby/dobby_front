@@ -12,19 +12,19 @@
         <div class="SignUp-FormItem">
           <div class="name">
             <div class="SignUp-FormLabel">이름</div>
-            <input type="text" class="SignUp-FormTextbox" />
+            <el-input class="SignUp-FormTextbox"></el-input>
           </div>
           <div class="PassWord">
             <div class="SignUp-FormLabel">비밀번호</div>
-            <input type="text" class="SignUp-FormTextbox" />
+            <el-input class="SignUp-FormTextbox"></el-input>
           </div>
           <div class="PassWordConfirm">
             <div class="SignUp-FormLabel">비밀번호 확인</div>
-            <input type="text" class="SignUp-FormTextbox" />
+            <el-input class="SignUp-FormTextbox"></el-input>
           </div>
           <div class="CodeCertification">
             <div class="SignUp-FormLabel">코드 인증</div>
-            <input type="text" class="SignUp-FormTextbox" />
+            <el-input class="SignUp-FormTextbox"></el-input>
           </div>
           <br />
           <input type="button" class="SignUp-FormEnroll" value="가입하기" />
