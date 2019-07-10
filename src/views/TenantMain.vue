@@ -3,7 +3,7 @@
     <div class="TenantMain-Header">
       <div class="TenantMain-Header-Logo">
         <el-row>
-          <img src="..\assets\image\세입자.png" width="50" height="50" />
+          <img src="@/assets/image/세입자.png" width="50" height="50" />
         </el-row>
         <el-row>
           <label>세입자</label>
@@ -17,7 +17,7 @@
       <div class="TenantMain-Header-BlankBox"></div>
       <div class="TenantMain-Header-Notice">
         <div class="Notice_Icon">
-          <img src="..\assets\image\알림.png" width="50" height="50" />
+          <img src="@/assets/image/알림.png" width="50" height="50" />
         </div>
         <div class="Notice_Content">
           <label>---&nbsp;&nbsp;</label>
@@ -30,10 +30,10 @@
       <div>
         <el-row type="flex">
           <el-col>
-            <img src="..\assets\image\세입자_영수증1.png" width="600" height="700" />
+            <img src="@/assets/image/세입자_영수증1.png" width="600" height="700" />
           </el-col>
           <el-col>
-            <img src="..\assets\image\세입자_영수증2.png" width="500" height="700" />
+            <img src="@/assets/image/세입자_영수증2.png" width="500" height="700" />
           </el-col>
         </el-row>
       </div>
