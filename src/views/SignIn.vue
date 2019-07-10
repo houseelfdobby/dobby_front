@@ -2,8 +2,7 @@
   <div class="SiginIn">
     <div class="SiginIn-Header">
       <div>
-        로고
-        <img src alt />
+        <img class="logo" src="../assets/image/도비.png" alt="도비">
       </div>
       <div class="SiginIn-Header-Form">
         <el-row>
@@ -71,6 +70,12 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.logo {
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
 .vertContainer {
   display: flex;
 }

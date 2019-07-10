@@ -44,6 +44,7 @@ export default new Router({
       name: 'tenant_main',
       component: TenantMain
     },
+    {
       path: '/certificate',
       mame: 'certificate',
       component: Certificate
