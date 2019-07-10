@@ -54,8 +54,10 @@ export default {
 
 <style lang='scss' scoped>
 @import "@/assets/css/index.scss";
+.glide__slides{
+  margin:10px auto;
+}
 .Room {
-  border-right: 1px solid $mainColor;
   font-size: 16px;
   &-Icon {
     width: 25px;
@@ -66,11 +68,12 @@ export default {
     color: white;
     background-color: $mainColor;
     border-radius: 18%;
-    padding:5px;
+    padding:10px;
     .el-button {
-      width: 80%;
+      width: 100%;
       padding: 10px 5px;
-      margin: 2px 0px 7px 0px;
+      margin-top:5px;
+      // margin: 2px 0px 7px 0px;
     }
   }
 }
