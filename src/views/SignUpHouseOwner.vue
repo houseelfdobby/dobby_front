@@ -45,6 +45,8 @@
 </template>
 
 <script>
+import VueDaumPostcode from "vue-daum-postcode";
+
 export default {
   data() {
     return {
@@ -54,6 +56,9 @@ export default {
         { label: "비밀번화 확인" }
       ]
     };
+  },
+  components: {
+    "vue-daum-postcode": VueDaumPostcode
   }
 };
 </script>
