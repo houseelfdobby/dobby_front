@@ -27,12 +27,12 @@ export default new Router({
       component: MainOwner
     },
     {
-      path: '/signup_tenant',
+      path: '/signup/tenant',
       name: 'signup_tenant',
       component: SignUpTenant
     },     
     {
-      path: '/signup_houseowner',
+      path: '/signup/houseowner',
       name: 'signup_houseowner',
       component: SignUpHouseOwner
 
