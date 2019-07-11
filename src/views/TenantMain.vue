@@ -115,7 +115,20 @@
                 </div>
               </div>
             </div>
-            <div class="TenantMain-Contents-Receipt-Right-Money"></div>
+            <div class="TenantMain-Contents-Receipt-Right-Money">
+              <div class="TenantMain-Contents-Receipt-Right-Money-Monthly">
+                <label>&#8361; 250,000</label>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Money-Gas">
+                <label>&#8361; 100,000</label>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Money-Electricity">
+                <label>&#8361; 135,000</label>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Money-Water">
+                <label>&#8361; 30,000</label>
+              </div>
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -372,6 +385,40 @@ export default {
             z-index: 100;
             position: absolute;
             top: 270px;
+          }
+        }
+        &-Money {
+          &-Monthly {
+            z-index: 103;
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            left: 1050px;
+            top: 165px;
+          }
+          &-Gas {
+            z-index: 103;
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            left: 1050px;
+            top: 255px;
+          }
+          &-Electricity {
+            z-index: 103;
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            left: 1050px;
+            top: 340px;
+          }
+          &-Water {
+            z-index: 103;
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            left: 1050px;
+            top: 435px;
           }
         }
       }
