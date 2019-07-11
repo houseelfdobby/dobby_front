@@ -93,25 +93,25 @@
               <div class="TenantMain-Contents-Receipt-Right-Icon-Monthly">
                 <img src="..\assets\image\전월세, 초록.png" width="60px" height="60px" />
                 <div class="TenantMain-Contents-Receipt-Right-Icon-Monthly-Name">
-                  <label>월세</label>
+                  <label>&nbsp&nbsp&nbsp월세</label>
                 </div>
               </div>
               <div class="TenantMain-Contents-Receipt-Right-Icon-Gas">
                 <img src="..\assets\image\가스비, 초록.png" width="60px" height="60px" />
                 <div class="TenantMain-Contents-Receipt-Right-Icon-Gas-Name">
-                  <label>가스비</label>
+                  <label>&nbsp&nbsp가스비</label>
                 </div>
               </div>
               <div class="TenantMain-Contents-Receipt-Right-Icon-Electricity">
                 <img src="..\assets\image\전기세, 빨강.png" width="60px" height="60px" />
                 <div class="TenantMain-Contents-Receipt-Right-Icon-Electricity-Name">
-                  <label>전기세</label>
+                  <label>&nbsp&nbsp전기세</label>
                 </div>
               </div>
               <div class="TenantMain-Contents-Receipt-Right-Icon-Water">
                 <img src="..\assets\image\수도세, 초록.png" width="60px" height="60px" />
                 <div class="TenantMain-Contents-Receipt-Right-Icon-Water-Name">
-                  <label>수도세</label>
+                  <label>&nbsp&nbsp수도세</label>
                 </div>
               </div>
             </div>
@@ -357,8 +357,6 @@ export default {
             z-index: 100;
             position: absolute;
             top: 0px;
-            &-Name {
-            }
           }
           &-Gas {
             z-index: 100;
