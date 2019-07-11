@@ -8,22 +8,14 @@
         <div class="SignUp-BannerText">- TENANT -</div>
         <br />
       </div>
-      <div class="SignUp-Form" align="left">
-        <div class="name SignUp-FormItem">
-          <div class="SignUp-FormLabel">이름</div>
-          <el-input class="SignUp-FormTextbox"></el-input>
-        </div>
-        <div class="PassWord SignUp-FormItem">
-          <div class="SignUp-FormLabel">비밀번호</div>
-          <el-input class="SignUp-FormTextbox"></el-input>
-        </div>
-        <div class="PassWordConfirm SignUp-FormItem">
-          <div class="SignUp-FormLabel">비밀번호 확인</div>
-          <el-input class="SignUp-FormTextbox"></el-input>
-        </div>
-        <div class="CodeCertification SignUp-FormItem">
-          <div class="SignUp-FormLabel">코드 인증</div>
-          <el-input class="SignUp-FormTextbox"></el-input>
+      <div class="SignUp-Form">
+        <div
+          class="name SignUp-FormItem"
+          v-for="(formItem,index) in formList"
+          :key="'singup'+index"
+        >
+          <div class="SignUp-FormLabel" v-text="formItem.name"></div>
+          <el-input class="SignUp-FormTextbox" :type="formItem.type" v-model="formItem.value"></el-input>
         </div>
         <div class="SignUp-FormItem">
           <input type="button" class="SignUp-FormEnroll" value="가입하기" />
@@ -34,7 +26,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      formList: [
+        {
+          name: "이름",
+          type: "text",
+          value: ""
+        },
+        {
+          name: "비빌먼호",
+          type: "password",
+          value: ""
+        },
+        {
+          name: "비빌먼호 확인",
+          type: "password",
+          value: ""
+        },
+        {
+          name: "코드 인증",
+          type: "text",
+          value: ""
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>

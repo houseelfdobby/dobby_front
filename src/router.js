@@ -35,7 +35,6 @@ export default new Router({
       path: '/signup/houseowner',
       name: 'signup_houseowner',
       component: SignUpHouseOwner
-
     },
     {
       path: '/enroll',
