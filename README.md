@@ -1,32 +1,12 @@
 # dobby_front
 
 ## Project setup
-```
-npm install
-```
+scss
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 외부 라이브러이
+* glide
+* vue-daum-postcode
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### **Views**
 
