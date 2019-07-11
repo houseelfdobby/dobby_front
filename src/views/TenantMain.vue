@@ -3,7 +3,7 @@
     <div class="TenantMain-Header">
       <div class="TenantMain-Header-Logo">
         <el-row>
-          <img src="@/assets/image/세입자.png" width="50" height="50" />
+          <img src="..\assets\image\세입자.png" width="50" height="50" />
         </el-row>
         <el-row>
           <label>세입자</label>
@@ -17,7 +17,7 @@
       <div class="TenantMain-Header-BlankBox"></div>
       <div class="TenantMain-Header-Notice">
         <div class="Notice_Icon">
-          <img src="@/assets/image/알림.png" width="50" height="50" />
+          <img src="..\assets\image\알림.png" width="50" height="50" />
         </div>
         <div class="Notice_Content">
           <label>---&nbsp;&nbsp;</label>
@@ -26,18 +26,100 @@
         </div>
       </div>
     </div>
-    <el-main>
-      <div>
-        <el-row type="flex">
-          <el-col>
-            <img src="@/assets/image/세입자_영수증1.png" width="600" height="700" />
-          </el-col>
-          <el-col>
-            <img src="@/assets/image/세입자_영수증2.png" width="500" height="700" />
-          </el-col>
-        </el-row>
-      </div>
-    </el-main>
+    <div class="TenantMain-Contents">
+      <br />
+      <el-row type="flex">
+        <el-col>
+          <div class="TenantMain-Contents-Receipt-Left">
+            <div class="TenantMain-Contents-Receipt-Left-Background">
+              <img src="..\assets\image\세입자_영수증1.png" width="600" height="700" />
+            </div>
+            <div class="BackgroundCover"></div>
+            <div class="TenantMain-Contents-Receipt-Left-PaymentDate">
+              <label>월세 납부일</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-PaymentDate-Result">
+              <label>: 매월 15일</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Monthly">
+              <label>월세</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Monthly-Result">
+              <label>: 250,000원</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Deposit">
+              <label>현재 보증금</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Deposit-Result">
+              <label>: 5,000,000원</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Gas">
+              <label>가스비 납부일 : 매월</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Gas-Result">
+              <label>10일</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Water">
+              <label>수도세 납부일 : 매월</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Water-Result">
+              <label>10일</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Electricity">
+              <label>전기세 납부일 : 매월</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Electricity-Result">
+              <label>10일</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Left-Question">
+              <el-button
+                style="background-color: #203864; color: #ffffff; font-size: 26px; font-family: a스마일B;"
+              >1:1 문의 하기</el-button>
+            </div>
+          </div>
+        </el-col>
+        <el-col>
+          <div class="TenantMain-Contents-Receipt-Right">
+            <div class="TenantMain-Contents-Receipt-Right-Background">
+              <img src="..\assets\image\세입자_영수증2.png" width="500" height="700" />
+            </div>
+            <div class="TenantMain-Contents-Receipt-Right-Room">
+              <label>101</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Right-Title">
+              <label>호 영수증</label>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Right-Icon">
+              <div class="TenantMain-Contents-Receipt-Right-Icon-Monthly">
+                <img src="..\assets\image\전월세, 초록.png" width="60px" height="60px" />
+                <div class="TenantMain-Contents-Receipt-Right-Icon-Monthly-Name">
+                  <label>월세</label>
+                </div>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Icon-Gas">
+                <img src="..\assets\image\가스비, 초록.png" width="60px" height="60px" />
+                <div class="TenantMain-Contents-Receipt-Right-Icon-Gas-Name">
+                  <label>가스비</label>
+                </div>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Icon-Electricity">
+                <img src="..\assets\image\전기세, 빨강.png" width="60px" height="60px" />
+                <div class="TenantMain-Contents-Receipt-Right-Icon-Electricity-Name">
+                  <label>전기세</label>
+                </div>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Icon-Water">
+                <img src="..\assets\image\수도세, 초록.png" width="60px" height="60px" />
+                <div class="TenantMain-Contents-Receipt-Right-Icon-Water-Name">
+                  <label>수도세</label>
+                </div>
+              </div>
+            </div>
+            <div class="TenantMain-Contents-Receipt-Right-Money"></div>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -70,6 +152,8 @@ export default {
 .TenantMain {
   font-family: a스마일B;
   background-color: rgb(217, 217, 217);
+  width: 100%;
+  height: 100%;
   &-Header {
     display: flex;
     padding: auto 20px;
@@ -120,37 +204,180 @@ export default {
       }
     }
   }
-  &-SignUp {
-    &Group {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  &-Contents {
+    color: rgb(32, 56, 100);
+    &-Receipt {
+      &-Left {
+        /*
+        background-image: url("../assets/image/세입자_영수증1.png");
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        */
+        &-Background {
+          z-index: 99;
+          position: absolute;
+          left: 90px;
+          top: 0px;
+        }
+        &-PaymentDate {
+          z-index: 100;
+          position: absolute;
+          font-size: 20px;
+          font-weight: bold;
+          left: 195px;
+          top: 120px;
+          &-Result {
+            z-index: 100;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            left: 195px;
+            top: 160px;
+          }
+        }
+        &-Monthly {
+          z-index: 101;
+          position: absolute;
+          font-size: 20px;
+          font-weight: bold;
+          left: 395px;
+          top: 120px;
+          &-Result {
+            z-index: 101;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            left: 360px;
+            top: 160px;
+          }
+        }
+        &-Deposit {
+          z-index: 102;
+          position: absolute;
+          font-size: 20px;
+          font-weight: bold;
+          left: 530px;
+          top: 120px;
+          &-Result {
+            z-index: 102;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            left: 520px;
+            top: 160px;
+          }
+        }
+        &-Gas {
+          z-index: 103;
+          position: absolute;
+          font-size: 27px;
+          font-weight: bold;
+          left: 250px;
+          top: 270px;
+          &-Result {
+            z-index: 103;
+            position: absolute;
+            font-size: 27px;
+            font-weight: bold;
+            left: 500px;
+            top: 270px;
+          }
+        }
+        &-Water {
+          z-index: 103;
+          position: absolute;
+          font-size: 27px;
+          font-weight: bold;
+          left: 250px;
+          top: 390px;
+          &-Result {
+            z-index: 103;
+            position: absolute;
+            font-size: 27px;
+            font-weight: bold;
+            left: 500px;
+            top: 390px;
+          }
+        }
+        &-Electricity {
+          z-index: 103;
+          position: absolute;
+          font-size: 27px;
+          font-weight: bold;
+          left: 250px;
+          top: 500px;
+          &-Result {
+            z-index: 103;
+            position: absolute;
+            font-size: 27px;
+            font-weight: bold;
+            left: 500px;
+            top: 500px;
+          }
+        }
+        &-Question {
+          z-index: 104;
+          position: absolute;
+          font-weight: bold;
+          left: 320px;
+          top: 585px;
+        }
+      }
+      &-Right {
+        &-Background {
+          z-index: 99;
+          position: absolute;
+          left: 900px;
+          top: 0px;
+        }
+        &-Room {
+          z-index: 100;
+          position: absolute;
+          font-size: 45px;
+          font-weight: bold;
+          left: 1040px;
+          top: 75px;
+        }
+        &-Title {
+          z-index: 100;
+          position: absolute;
+          font-size: 45px;
+          font-weight: bold;
+          left: 1100px;
+          top: 75px;
+        }
+        &-Icon {
+          z-index: 100;
+          position: absolute;
+          left: 930px;
+          top: 150px;
+
+          &-Monthly {
+            z-index: 100;
+            position: absolute;
+            top: 0px;
+            &-Name {
+            }
+          }
+          &-Gas {
+            z-index: 100;
+            position: absolute;
+            top: 90px;
+          }
+          &-Electricity {
+            z-index: 100;
+            position: absolute;
+            top: 180px;
+          }
+          &-Water {
+            z-index: 100;
+            position: absolute;
+            top: 270px;
+          }
+        }
+      }
     }
-    &Item {
-      // background-color: aqua;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      width: 100%;
-    }
-    &Font {
-      text-align: start;
-      font-size: 30px;
-      font-weight: 600;
-    }
-  }
-  .el-main {
-    .el-button {
-      background-color: rgb(50, 93, 173);
-      color: white;
-      width: 100%;
-      font-size: 20px;
-      font-weight: 600;
-      height: 50px;
-    }
-  }
-  .el-form-item {
-    margin: 0;
   }
 }
 </style>
