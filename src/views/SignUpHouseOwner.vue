@@ -1,45 +1,45 @@
 <template>
   <div class="SignUp">
-    <div class="SignUp-Cotent">
+    <div class="SignUp-Content">
       <div class="SignUp-Banner">
-        <div class="SignUp-BannerImg">
-          <img class="logo" src="@/assets/image/도비.png" alt />
-        </div>
+        <img class="SignUp-BannerImg" src="@/assets/image/도비.png" alt />
         <div class="SignUp-BannerText">- HOUSE OWNER -</div>
-        <br />
       </div>
-      <div class="SignUp-Form" align="left">
+      <div class="SignUp-Form">
         <div class="SignUp-FormItem" v-for="(item, index) in formItems" :key="'basicform'+index">
           <div class="SignUp-FormLabel">{{item.label}}</div>
           <el-input class="SignUp-FormTextInput"></el-input>
         </div>
         <div class="SignUp-FormItem">
           <div class="SignUp-FormLabel">건물주소</div>
-          <input type="text" class="SignUp-FormZipCode" placeholder="우편 번호" /> &nbsp;
-          <input type="button" class="SignUp-FormSearch" value="검색" />
+          <div class="SignUp-FormAddress">
+            <el-input style="gridArea:zip"></el-input>
+            <el-button style="gridArea:button">검색</el-button>
+            <el-input style="gridArea:detail"></el-input>
+          </div>
         </div>
-        <div class>
-          <input type="text" class="SignUp-FormTextbox" placeholder="상세 주소" />
+        <div class="SignUp-FormItem">
+          <div class="SignUp-FormLabel">건물주소</div>
+          <el-select v-model="accountValue" style="width:30%;marginRight:5%;">
+            <el-option
+              v-for="(item,index) in accountOptions"
+              :key="'account'+index"
+              :label="item"
+              :value="item"
+            ></el-option>
+          </el-select>
+          <el-input style="width:65%;"></el-input>
         </div>
-        <div class="Account">
-          <div class="SignUp-FormLabel">계좌번호</div>
-          <select name="bank">
-            <option value selected disabled hidden>==은행==</option>
-            <option value="광주은행">광주은행</option>
-            <option value="전북은행">전북은행</option>
-            <option value="농협">농협</option>
-          </select> &nbsp;
-          <input type="text" class="SignUp-FormAccountNumber" placeholder="계좌 번호" />
-        </div>
-        <div class="Building">
+        <div class="SignUp-FormItem">
           <div class="SignUp-FormLabel">건물상세정보</div>
-          <input type="text" class="SignUp-FormBuildingFloor" placeholder="층" /> &nbsp;
-          <input type="text" class="SignUp-FormBuildingRoom" placeholder="호" />
+          <div style="display:flex;">
+            <el-input style="marginRight:20px;" placeholder="층"></el-input>
+            <el-input placeholder="호"></el-input>
+          </div>
         </div>
-        <br />
         <input type="button" class="SignUp-FormEnroll" value="가입하기" />
-        <!-- 건물주 Main으로  -->
       </div>
+      <!-- 건물주 Main으로  -->
     </div>
   </div>
 </template>
@@ -54,7 +54,9 @@ export default {
         { label: "이름" },
         { label: "비밀번호" },
         { label: "비밀번화 확인" }
-      ]
+      ],
+      accountOptions: ["광주은행", "전북은행", "농협"],
+      accountValue: ""
     };
   },
   components: {
@@ -65,70 +67,44 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/index.scss";
-.el-input {
-  border: 1px solid $mainColor;
-  margin: 2px;
-}
-.el-input__inner {
-  margin: 2px;
-}
 .SignUp {
   font-family: a스마일B;
   background-color: rgb(217, 217, 217);
-  &-BannerImg {
-    .logo {
-      width: 50px;
-      height: 50px;
-    }
-  }
-  &-Form {
+  height: 100%;
+  &-Content {
     width: 100%;
     max-width: 350px;
     margin: auto;
-    &Item {
-      margin: 6px;
+  }
+  &-Banner {
+    padding-top:35px;
+    text-align: center;
+    &Img{
+      width:55px;
     }
-    &TextInput {
-      width: 100%;
-    }
-    &ZipCode {
-      width: 140px;
-      height: 22px;
-      border: 1px solid #999999;
-    }
-    &AccountNumber {
-      width: 132px;
-      height: 22px;
-      border: 1px solid #999999;
-    }
-    &BuildingFloor {
-      width: 105px;
-      height: 22px;
-      border: 1px solid #999999;
-    }
-    &BuildingRoom {
-      width: 105px;
-      height: 22px;
-      border: 1px solid #999999;
-    }
+  }
 
-    &Search {
-      font-family: a스마일B;
-      background-color: rgb(32, 56, 100);
-      color: white;
-      width: 75px;
-      height: 22px;
-      border: 1px solid rgb(32, 56, 100);
-      border-radius: 10px;
+  &-Form {
+    &TextInput {
+      margin: 5px auto;
+    }
+    &Address {
+      display: grid;
+      grid-gap: 7px;
+      grid-template-areas:
+        "zip zip button"
+        "detail detail detail";
     }
     &Enroll {
       font-family: a스마일B;
+      margin-top: 50px;
       background-color: rgb(32, 56, 100);
       color: white;
-      width: 234px;
-      height: 22px;
+      padding: 10px;
+      width: 100%;
+      // height: 22px;
       border: 1px solid rgb(32, 56, 100);
-      border-radius: 10px;
+      border-radius: 3px;
     }
   }
 }
