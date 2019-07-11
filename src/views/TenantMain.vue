@@ -129,6 +129,28 @@
                 <label>&#8361; 30,000</label>
               </div>
             </div>
+            <div class="TenantMain-Contents-Receipt-Right-Send">
+              <div class="TenantMain-Contents-Receipt-Right-Send-Monthly">
+                <el-button
+                  style="background-color: #203864; color: #ffffff; font-size: 20px; font-family: a스마일B;"
+                >송금하기</el-button>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Send-Gas">
+                <el-button
+                  style="background-color: #203864; color: #ffffff; font-size: 20px; font-family: a스마일B;"
+                >송금하기</el-button>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Send-Electricity">
+                <el-button
+                  style="background-color: #203864; color: #ffffff; font-size: 20px; font-family: a스마일B;"
+                >송금하기</el-button>
+              </div>
+              <div class="TenantMain-Contents-Receipt-Right-Send-Water">
+                <el-button
+                  style="background-color: #203864; color: #ffffff; font-size: 20px; font-family: a스마일B;"
+                >송금하기</el-button>
+              </div>
+            </div>
           </div>
         </el-col>
       </el-row>
@@ -394,7 +416,7 @@ export default {
             font-size: 40px;
             font-weight: bold;
             left: 1050px;
-            top: 165px;
+            top: 170px;
           }
           &-Gas {
             z-index: 103;
@@ -410,7 +432,7 @@ export default {
             font-size: 40px;
             font-weight: bold;
             left: 1050px;
-            top: 340px;
+            top: 343px;
           }
           &-Water {
             z-index: 103;
@@ -418,7 +440,37 @@ export default {
             font-size: 40px;
             font-weight: bold;
             left: 1050px;
-            top: 435px;
+            top: 433px;
+          }
+        }
+        &-Send {
+          &-Monthly {
+            z-index: 104;
+            position: absolute;
+            font-weight: bold;
+            left: 1270px;
+            top: 170px;
+          }
+          &-Gas {
+            z-index: 104;
+            position: absolute;
+            font-weight: bold;
+            left: 1270px;
+            top: 255px;
+          }
+          &-Electricity {
+            z-index: 104;
+            position: absolute;
+            font-weight: bold;
+            left: 1270px;
+            top: 343px;
+          }
+          &-Water {
+            z-index: 104;
+            position: absolute;
+            font-weight: bold;
+            left: 1270px;
+            top: 433px;
           }
         }
       }
